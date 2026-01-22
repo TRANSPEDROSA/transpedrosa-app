@@ -6,138 +6,135 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-:root {
-    --laranja: #ff8c00;
-    --azul: #0b3c5d;
-    --vidro: rgba(255,255,255,0.12);
+:root{
+    --laranja:#ff8c00;
+    --azul:#0b3c5d;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    font-family: 'Inter', sans-serif;
-    background: url('frota.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
+body{
+    font-family:'Inter',sans-serif;
+    background:url('frota.jpg') center/cover no-repeat fixed;
+    color:#fff;
 }
 
-/* Fundo escuro elegante */
-.backdrop {
-    min-height: 100vh;
-    background: linear-gradient(
-        180deg,
-        rgba(0,0,0,0.65),
-        rgba(0,0,0,0.85)
-    );
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+/* Camada escura */
+.overlay{
+    min-height:100vh;
+    background:rgba(0,0,0,0.75);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
 }
 
-/* Caixa futurista */
-.container {
-    width: 100%;
-    max-width: 900px;
-    padding: 45px;
-    border-radius: 18px;
-    background: var(--vidro);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.45);
-    text-align: center;
-    border: 1px solid rgba(255,255,255,0.2);
+/* Card principal */
+.card{
+    width:100%;
+    max-width:520px;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(18px);
+    border-radius:20px;
+    padding:35px 25px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.5);
+    border:1px solid rgba(255,255,255,0.25);
+    text-align:center;
 }
 
 /* Logo */
-.container img {
-    max-width: 220px;
-    margin-bottom: 25px;
+.card img{
+    width:180px;
+    margin-bottom:20px;
 }
 
-/* Título */
-.container h1 {
-    font-size: 34px;
-    font-weight: 700;
-    margin-bottom: 15px;
+/* Nome grande */
+.card h1{
+    font-size:32px;
+    font-weight:800;
+    letter-spacing:1px;
+    margin-bottom:10px;
 }
 
-/* Subtexto */
-.container p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #eaeaea;
-    margin-bottom: 25px;
+/* Slogan */
+.card h2{
+    font-size:18px;
+    font-weight:500;
+    opacity:0.95;
+    margin-bottom:22px;
 }
 
-/* Android */
-.android {
-    font-size: 17px;
-    color: #7CFF7C;
-    font-weight: 600;
-    margin-bottom: 35px;
+/* Texto */
+.card p{
+    font-size:16px;
+    line-height:1.6;
+    color:#f1f1f1;
+    margin-bottom:28px;
 }
 
-/* Botão futurista */
-.button {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 18px 36px;
-    font-size: 18px;
-    font-weight: 600;
-    color: #fff;
-    background: linear-gradient(135deg, #ff8c00, #ff6a00);
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 10px 30px rgba(255,140,0,0.45);
-    transition: all 0.3s ease;
+/* Botão */
+.btn{
+    display:block;
+    width:100%;
+    padding:18px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#ff8c00,#ff6a00);
+    color:#fff;
+    font-size:18px;
+    font-weight:700;
+    text-decoration:none;
+    box-shadow:0 15px 40px rgba(255,140,0,0.45);
+    transition:0.3s;
 }
 
-.button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 45px rgba(255,140,0,0.6);
+.btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 20px 50px rgba(255,140,0,0.65);
 }
 
 /* Segurança */
-.security {
-    margin-top: 40px;
-    padding: 25px;
-    border-radius: 12px;
-    background: rgba(0,0,0,0.4);
-    text-align: left;
-    font-size: 15px;
-    line-height: 1.6;
-    border-left: 4px solid var(--laranja);
+.security{
+    margin-top:30px;
+    background:rgba(0,0,0,0.45);
+    padding:20px;
+    border-radius:14px;
+    font-size:14px;
+    line-height:1.6;
+    text-align:left;
+    border-left:4px solid var(--laranja);
 }
 
 /* Rodapé */
-footer {
-    margin-top: 35px;
-    font-size: 14px;
-    color: #cfcfcf;
-    text-align: center;
+footer{
+    margin-top:25px;
+    font-size:13px;
+    opacity:0.85;
 }
 
-/* Responsivo */
-@media (max-width: 600px) {
-    .container {
-        padding: 30px 20px;
+/* Ajustes para telas maiores */
+@media(min-width:768px){
+    .card{
+        max-width:650px;
+        padding:45px;
     }
 
-    .container h1 {
-        font-size: 26px;
+    .card h1{
+        font-size:38px;
     }
 
-    .container p {
-        font-size: 16px;
+    .card h2{
+        font-size:20px;
+    }
+
+    .card p{
+        font-size:17px;
     }
 }
 </style>
@@ -145,33 +142,29 @@ footer {
 
 <body>
 
-<div class="backdrop">
-
-    <div class="container">
+<div class="overlay">
+    <div class="card">
 
         <img src="logo.png" alt="TRANSPEDROSA">
 
-        <h1>Transporte inteligente, seguro e conectado</h1>
+        <h1>TRANSPEDROSA</h1>
+        <h2>Logística inteligente e transporte seguro</h2>
 
         <p>
-            Aplicativo oficial da <strong>TRANSPEDROSA</strong>, criado para motoristas,
-            parceiros e colaboradores, garantindo controle, rastreabilidade
-            e comunicação em tempo real.
+            Aplicativo oficial da TRANSPEDROSA, desenvolvido para motoristas,
+            parceiros e colaboradores. Mais controle, rastreabilidade e
+            comunicação em um só lugar.
         </p>
 
-        <div class="android">
-            ✔ Compatível com dispositivos Android
-        </div>
-
-        <a class="button" href="Transpedrosa.apk">
+        <a class="btn" href="Transpedrosa.apk">
             📲 Baixar Aplicativo Oficial
         </a>
 
         <div class="security">
-            🔒 <strong>Segurança e autenticidade</strong><br>
+            🔒 <strong>Segurança e confiabilidade</strong><br>
             Este é o aplicativo oficial da TRANSPEDROSA.<br>
-            Nunca solicitamos senhas bancárias ou dados sensíveis.<br>
-            Caso o Android exiba um aviso, prossiga apenas se a fonte for confiável.
+            Não solicitamos senhas, dados bancários ou informações sensíveis.<br>
+            Baixe apenas por canais oficiais.
         </div>
 
         <footer>
@@ -179,7 +172,6 @@ footer {
         </footer>
 
     </div>
-
 </div>
 
 </body>
