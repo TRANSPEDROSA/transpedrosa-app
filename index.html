@@ -1,134 +1,147 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>TRANSPEDROSA | Aplicativo Oficial</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>TRANSPEDROSA | Aplicativo Oficial</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f2f2f2;
-      color: #333;
-    }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    header {
-      background: #ffffff;
-      text-align: center;
-      padding: 20px;
-      border-bottom: 4px solid #f7931e;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    header img {
-      max-width: 220px;
-    }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-    .hero {
-      background: url("frota.jpg") center/cover no-repeat;
-      padding: 60px 20px;
-      color: #fff;
-      text-align: center;
-    }
+body {
+    margin: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    background: url('frota.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
 
-    .hero h1 {
-      background: rgba(0,0,0,0.6);
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-size: 24px;
-    }
+/* Camada escura para dar contraste */
+.overlay {
+    min-height: 100vh;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
 
-    .container {
-      max-width: 900px;
-      margin: -40px auto 20px;
-      background: #fff;
-      border-radius: 12px;
-      padding: 25px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    }
+/* Caixa principal */
+.card {
+    background: #ffffff;
+    max-width: 900px;
+    width: 100%;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    text-align: center;
+}
 
-    .container p {
-      font-size: 16px;
-      line-height: 1.6;
-      text-align: center;
-    }
+/* Logo */
+.card img {
+    max-width: 220px;
+    margin-bottom: 20px;
+}
 
-    .android {
-      font-weight: bold;
-      color: green;
-      margin-top: 15px;
-      text-align: center;
-    }
+/* Título */
+.card h1 {
+    color: #0b3c5d;
+    margin-bottom: 15px;
+}
 
-    .download {
-      display: block;
-      margin: 25px auto;
-      background: #f7931e;
-      color: #fff;
-      text-decoration: none;
-      padding: 15px;
-      max-width: 320px;
-      border-radius: 10px;
-      font-size: 18px;
-      text-align: center;
-    }
+/* Texto */
+.card p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
 
-    .download:hover {
-      background: #e67e00;
-    }
+/* Android */
+.android {
+    color: green;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
 
-    .security {
-      margin-top: 25px;
-      background: #f9f9f9;
-      border-left: 5px solid #f7931e;
-      padding: 15px;
-      font-size: 14px;
-    }
+/* Botão */
+.btn {
+    display: inline-block;
+    background: #ff8c00;
+    color: #ffffff;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-    footer {
-      text-align: center;
-      padding: 15px;
-      font-size: 13px;
-      color: #666;
-    }
-  </style>
+.btn:hover {
+    background: #e67e00;
+}
+
+/* Segurança */
+.security {
+    margin-top: 30px;
+    background: #f2f4f7;
+    padding: 20px;
+    border-left: 5px solid #ff8c00;
+    text-align: left;
+    font-size: 15px;
+}
+
+/* Rodapé */
+footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #555;
+    text-align: center;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-  <img src="logo.png" alt="TRANSPEDROSA">
-</header>
+<div class="overlay">
 
-<section class="hero">
-  <h1>Transporte com segurança e eficiência</h1>
-</section>
+    <div class="card">
 
-<div class="container">
-  <p>
-    Aplicativo oficial da <strong>TRANSPEDROSA</strong>, desenvolvido para
-    motoristas, parceiros e colaboradores, garantindo mais eficiência,
-    rastreabilidade e comunicação no dia a dia.
-  </p>
+        <img src="logo.png" alt="TRANSPEDROSA">
 
-  <p class="android">Dispositivo compatível: Android</p>
+        <h1>Transporte com segurança e eficiência</h1>
 
-  <a class="download" href="Transpedrosa.apk">
-    📲 Baixar Aplicativo Oficial
-  </a>
+        <p>
+            Aplicativo oficial da <strong>TRANSPEDROSA</strong>, desenvolvido para motoristas,
+            parceiros e colaboradores, garantindo mais eficiência, rastreabilidade
+            e comunicação no dia a dia.
+        </p>
 
-  <div class="security">
-    🔒 <strong>Segurança e autenticidade</strong><br>
-    Este é o aplicativo oficial da TRANSPEDROSA.<br>
-    Não solicitamos senhas bancárias ou dados sensíveis.<br>
-    Caso o Android exiba um aviso, autorize apenas se a fonte for confiável.
-  </div>
+        <div class="android">
+            Dispositivo compatível: Android
+        </div>
+
+        <a class="btn" href="Transpedrosa.apk">
+            📲 Baixar Aplicativo Oficial
+        </a>
+
+        <div class="security">
+            🔒 <strong>Segurança e autenticidade</strong><br>
+            Este é o aplicativo oficial da TRANSPEDROSA.<br>
+            Não solicitamos senhas bancárias ou dados pessoais sensíveis.<br>
+            Caso o Android exiba um aviso, autorize apenas se a fonte for confiável.
+        </div>
+
+        <footer>
+            © 2026 TRANSPEDROSA — Todos os direitos reservados
+        </footer>
+
+    </div>
+
 </div>
-
-<footer>
-  © 2026 TRANSPEDROSA — Todos os direitos reservados
-</footer>
 
 </body>
 </html>
