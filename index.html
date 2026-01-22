@@ -2,49 +2,76 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>TRANSPEDROSA Transportes</title>
+<title>TRANSPEDROSA | Transportes e Logística</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #3b5870, #2c3e50);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background: #f4f6f8;
 }
 
-.card {
+.header {
     background: #ffffff;
-    width: 90%;
-    max-width: 380px;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 4px solid #ff8c00;
+}
+
+.header img {
+    max-width: 200px;
+}
+
+.hero {
+    background: url("frota.jpg") center/cover no-repeat;
+    height: 240px;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero-text {
+    position: relative;
+    color: #ffffff;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 15px;
+}
+
+.hero-text h1 {
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 420px;
+    margin: -60px auto 30px;
+    background: #ffffff;
     border-radius: 18px;
     padding: 30px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.2);
     text-align: center;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
 
-.logo {
-    width: 120px;
-    margin-bottom: 15px;
+.status {
+    margin: 15px 0;
+    font-weight: bold;
 }
 
-h1 {
-    margin: 10px 0;
-    color: #1f3447;
-}
-
-p {
-    font-size: 14px;
-    color: #555;
-}
+.android { color: green; }
+.nao-android { color: red; }
 
 button {
     width: 100%;
     padding: 16px;
-    background: #ffc107;
+    background: #ff8c00;
+    color: #fff;
     border: none;
     border-radius: 12px;
     font-size: 16px;
@@ -54,33 +81,26 @@ button {
 }
 
 button:hover {
-    background: #ffb300;
+    background: #e67e00;
 }
 
 .alert {
     margin-top: 20px;
     background: #f8f9fa;
-    padding: 12px;
-    border-radius: 10px;
+    border-left: 5px solid #ff8c00;
+    padding: 14px;
+    font-size: 13px;
+    color: #333;
+    text-align: left;
+}
+
+.footer {
+    text-align: center;
     font-size: 12px;
-    color: #444;
+    color: #666;
+    margin-bottom: 20px;
 }
 
-.android {
-    color: green;
-    font-weight: bold;
-}
-
-.nao-android {
-    color: red;
-    font-weight: bold;
-}
-
-footer {
-    margin-top: 15px;
-    font-size: 11px;
-    color: #777;
-}
 </style>
 
 <script>
@@ -93,7 +113,7 @@ function verificarAndroid() {
         status.innerHTML = "Dispositivo compatível: <span class='android'>Android</span>";
         botao.style.display = "block";
     } else {
-        status.innerHTML = "Este aplicativo é exclusivo para <span class='nao-android'>Android</span>";
+        status.innerHTML = "Aplicativo disponível apenas para <span class='nao-android'>Android</span>";
         botao.style.display = "none";
     }
 }
@@ -102,25 +122,41 @@ function verificarAndroid() {
 
 <body onload="verificarAndroid()">
 
-<div class="card">
-    <img src="logo.png" alt="Logo TRANSPEDROSA" class="logo">
+<div class="header">
+    <img src="logo.png" alt="TRANSPEDROSA">
+</div>
 
-    <h1>TRANSPEDROSA</h1>
-    <p>Aplicativo oficial para motoristas, parceiros e colaboradores.</p>
+<div class="hero">
+    <div class="hero-text">
+        <h1>TRANSPEDROSA</h1>
+        <p>Transporte com segurança, agilidade e confiança</p>
+    </div>
+</div>
 
-    <p id="status"></p>
+<div class="container">
+    <p>
+        O aplicativo oficial da <strong>TRANSPEDROSA</strong> foi desenvolvido
+        para motoristas, parceiros e colaboradores, garantindo mais eficiência,
+        rastreabilidade e comunicação no dia a dia.
+    </p>
+
+    <div id="status" class="status"></div>
 
     <button id="btnDownload" onclick="window.location.href='Transpedrosa.apk'">
-        Baixar Aplicativo
+        📲 Baixar Aplicativo Oficial
     </button>
 
     <div class="alert">
-        ⚠️ <strong>Aviso de segurança:</strong><br>
-        Este aplicativo é oficial da TRANSPEDROSA.<br>
-        Caso o Android exiba um aviso, permita a instalação de fontes confiáveis.
+        🔒 <strong>Segurança e autenticidade</strong><br>
+        Este é o aplicativo oficial da TRANSPEDROSA.<br>
+        Não solicitamos senhas bancárias ou dados pessoais sensíveis.<br>
+        Caso o Android exiba um aviso, autorize apenas se a fonte for confiável.
     </div>
+</div>
 
-    <footer>© 2026 TRANSPEDROSA</footer>
+<div class="footer">
+    © 2026 TRANSPEDROSA • Transporte e Logística<br>
+    www.transpedrosa.com.br
 </div>
 
 </body>
